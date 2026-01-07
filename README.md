@@ -38,7 +38,7 @@ A comprehensive mobile application built with **Flutter** for managing student r
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/student-management-app.git
+   https://github.com/hadi488/Flutter-Student-Management-App-Client-Side-.git
    ```
 2. **Install dependencies**:
    ```bash

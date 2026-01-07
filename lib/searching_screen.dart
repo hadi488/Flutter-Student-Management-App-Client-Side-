@@ -131,12 +131,20 @@ class _SearchingScreenState extends State<SearchingScreen> {
                             ),
                             child: ListTile(
                               leading: CircleAvatar(
-                                backgroundColor: Colors.cyanAccent,
+                                backgroundColor:
+                                    Theme.of(context).brightness ==
+                                        Brightness.dark
+                                    ? Colors.cyan.shade700
+                                    : Colors.cyanAccent,
                                 child: Text(
                                   s.id.toString(),
-                                  style: const TextStyle(
+                                  style: TextStyle(
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.black87,
+                                    color:
+                                        Theme.of(context).brightness ==
+                                            Brightness.dark
+                                        ? Colors.white
+                                        : Colors.black87,
                                   ),
                                 ),
                               ),

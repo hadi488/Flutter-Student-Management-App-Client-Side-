@@ -5,6 +5,8 @@ import 'package:sqflitepractice/searching_screen.dart';
 
 import 'model_student.dart';
 
+import 'package:sqflitepractice/main.dart';
+
 class Dashboard extends StatefulWidget {
   const Dashboard({super.key});
 
@@ -19,7 +21,7 @@ class _DashboardState extends State<Dashboard> {
   @override
   void initState() {
     super.initState();
-    // loadStudents();
+    loadStudents();
   }
 
   Future<void> loadStudents() async {
@@ -30,7 +32,26 @@ class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Student Management System")),
+      appBar: AppBar(
+        title: Text("Student Management System"),
+        actions: [
+          ValueListenableBuilder<ThemeMode>(
+            valueListenable: themeNotifier,
+            builder: (context, value, child) {
+              return IconButton(
+                onPressed: () {
+                  themeNotifier.value = value == ThemeMode.light
+                      ? ThemeMode.dark
+                      : ThemeMode.light;
+                },
+                icon: Icon(
+                  value == ThemeMode.light ? Icons.dark_mode : Icons.light_mode,
+                ),
+              );
+            },
+          ),
+        ],
+      ),
 
       floatingActionButton: Stack(
         children: [
@@ -117,12 +138,19 @@ class _DashboardState extends State<Dashboard> {
                           loadStudents();
                         },
                         leading: CircleAvatar(
-                          backgroundColor: Colors.cyanAccent,
+                          backgroundColor:
+                              Theme.of(context).brightness == Brightness.dark
+                              ? Colors.cyan.shade700
+                              : Colors.cyanAccent,
                           child: Text(
                             s.id.toString(),
-                            style: const TextStyle(
+                            style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              color: Colors.black87,
+                              color:
+                                  Theme.of(context).brightness ==
+                                      Brightness.dark
+                                  ? Colors.white
+                                  : Colors.black87,
                             ),
                           ),
                         ),

@@ -87,9 +87,9 @@ lib/
 
 ## 📸 Screenshots
 
-| Dashboard | Add Record | Search |
-|-----------|------------|--------|
-| *List of students with delete options* | *Form with validation* | *Search by ID, Name, etc.* |
+| Dashboard | Add Record | Update Record | Search |
+|-----------|------------|---------------|--------|
+| ![Dashboard](screenshots/dashboard.png) | ![Add Record](screenshots/add_record.png) | ![Update Record](screenshots/update_screen.jpeg) | ![Search](screenshots/search_screen.png) |
 
 
 

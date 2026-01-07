@@ -91,7 +91,7 @@ lib/
 |-----------|------------|--------|
 | *List of students with delete options* | *Form with validation* | *Search by ID, Name, etc.* |
 
-*(Note: Add your actual screenshots here)*
+
 
 ---
 

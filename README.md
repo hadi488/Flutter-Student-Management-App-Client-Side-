@@ -8,6 +8,7 @@ A comprehensive mobile application built with **Flutter** for managing student r
 
 - **Local Persistence**: All data is stored locally using `sqflite`, ensuring the app works perfectly offline.
 - **Smart Dark Mode**: Built-in Light and Dark themes that adapt to system settings. Includes a manual toggle for instant switching with adaptive colors for reduced eye strain.
+- **Smart Add & Update**: A single, efficient screen handles both adding new students and updating existing ones. It pre-fills data for updates and validates inputs to ensure data integrity.
 - **Advanced Search**: Filter students instantly by **ID**, **Name**, or **Father's Name**. Deletions can be performed directly from search results.
 - **Input Validation**: Secure form handling prevents empty or invalid entries during record creation and updates.
 
